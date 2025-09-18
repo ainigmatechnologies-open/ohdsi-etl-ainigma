@@ -144,4 +144,4 @@ dmypy.json
 .DS_Store
 
 #vocabulary files
-postgres\vocabulary.zip
+postgres/vocabulary.zip

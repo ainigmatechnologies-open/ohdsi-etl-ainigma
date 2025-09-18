@@ -110,7 +110,7 @@ CREATE TABLE drug_strength (
 ;
 
 -- Temporary fix to include CPT4 concepts.
-\COPY CONCEPT FROM 'unzip -p /vocab CONCEPT_CPT4.csv' WITH DELIMITER E'\t' CSV HEADER QUOTE E'\b' ;
+\COPY CONCEPT FROM '/docker-entrypoint-initdb.d/CONCEPT_CPT4.csv' WITH DELIMITER E'\t' CSV HEADER QUOTE E'\b' ;
 
 \COPY DRUG_STRENGTH FROM program 'unzip -p /vocab DRUG_STRENGTH.csv' WITH DELIMITER E'\t' CSV HEADER QUOTE E'\b' ;
 
