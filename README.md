@@ -20,7 +20,7 @@ The mapping document can be found [here](https://thehyve.github.io/ohdsi-etl-pri
 
 ## Vocabulary
 
-You download the vocabulary files that you wish to use from Athena. The downloaded .zip folder containing the .csv vocabulary files needs to be renamed to [vocabulary.zip] and placed in the postgres folder. You also need to unzip the [CONCEPT_CPT4.csv] from the [vocabulary.zip] folder and place it in the postgres folder.
+You download the vocabulary files that you wish to use from Athena. The downloaded .zip folder containing the .csv vocabulary files needs to be renamed to *vocabulary.zip* and placed in the postgres folder. You also need to unzip the *CONCEPT_CPT4.csv* from the vocabulary.zip folder and place it in the postgres folder.
 
 ## Run
 ```bash
