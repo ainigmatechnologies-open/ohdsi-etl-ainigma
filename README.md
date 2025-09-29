@@ -35,7 +35,7 @@ First you navigate to your postgres directory
 
 And build the Docker image of postgres
 
-`docker-compose -t thehyve/ohdsi_postgresql`
+`docker build -t thehyve/ohdsi_postgresql .`
 
 Then you navigate back to your main project directory
 
