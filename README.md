@@ -18,6 +18,10 @@ The mapping document can be found [here](https://thehyve.github.io/ohdsi-etl-pri
     - UCUM
     - [PIONEER custom vocabulary](https://github.com/thehyve/ohdsi-omop-pioneer/blob/master/pioneer_custom_vocabulary/pioneer_concepts.csv)
 
+## Vocabulary
+
+You download the vocabulary files that you wish to use from Athena. The downloaded .zip folder containing the .csv vocabulary files needs to be renamed to *vocabulary.zip* and placed in the postgres folder. You also need to unzip the *CONCEPT_CPT4.csv* from the vocabulary.zip folder and place it in the postgres folder.
+
 ## Run
 ```bash
 main.py -s <path_to_source_data> -h <host> -p <port> -d <target_db> -u <user_name> -w <password>
@@ -25,7 +29,19 @@ main.py -s <path_to_source_data> -h <host> -p <port> -d <target_db> -u <user_nam
 A log of the run will be written to logs/<timestamp><version>.log    
 
 ## Docker
-`cd ohdsi-etl-prias`
+First you navigate to your postgres directory
+
+`cd postgres`
+
+And build the Docker image of postgres
+
+`docker build -t thehyve/ohdsi_postgresql .`
+
+Then you navigate back to your main project directory
+
+`cd ..`
+
+And start your container
 
 `docker-compose up -d` will start the following containers:
 * postgresql
