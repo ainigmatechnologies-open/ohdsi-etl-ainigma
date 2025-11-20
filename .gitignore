@@ -142,3 +142,6 @@ dmypy.json
 
 # Mac
 .DS_Store
+
+#vocabulary files
+postgres/vocabulary.zip

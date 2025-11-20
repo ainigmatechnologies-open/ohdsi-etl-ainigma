@@ -48,7 +48,7 @@ services:
       - app
     volumes:
       - postgresql_data:/bitnami/postgresql
-#      - ./postgres:/docker-entrypoint-initdb.d:ro
+      - ./postgres:/docker-entrypoint-initdb.d:ro
     environment:
       - POSTGRESQL_USERNAME=admin
       - POSTGRESQL_PASSWORD=secret
@@ -84,7 +84,7 @@ services:
       - ETL_PASSWORD=secret
       - ETL_SOURCE=/app/resources/test_datasets/1000_records
       - ETL_DEBUG=False
-      - ETL_SKIPVOCAB=False
+      - ETL_SKIPVOCAB=True
 
 volumes:
   postgresql_data:
